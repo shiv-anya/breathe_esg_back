@@ -65,26 +65,7 @@ TIME_ZONE = 'UTC'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    "https://breathe-esg-front-cyan.vercel.app",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://breathe-esg-front-cyan.vercel.app",
-]
-
-CORS_ALLOW_CREDENTIALS = True
-
-# Allows common methods (GET, POST, PUT, PATCH, DELETE, OPTIONS)
-CORS_ALLOW_METHODS = [
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-    "HEAD",
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -94,3 +75,30 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     )
 }
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://breathe-esg-front-cyan.vercel.app",
+]
