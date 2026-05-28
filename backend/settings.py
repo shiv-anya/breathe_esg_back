@@ -63,7 +63,6 @@ DATABASES = {
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
-STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
@@ -87,6 +86,7 @@ CORS_ALLOW_METHODS = [
     "HEAD",
 ]
 
+STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 REST_FRAMEWORK = {
