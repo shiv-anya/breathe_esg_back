@@ -30,6 +30,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -70,3 +71,9 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "https://breathe-esg-front-cyan.vercel.app",
 ]
+
+CORS_ALLOW_HEADERS = [
+    '*',
+]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
