@@ -59,6 +59,14 @@ DATABASES = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+CORS_ALLOWED_ORIGINS = [
+    "https://breathe-esg-front-cyan.vercel.app",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://breathe-esg-front-cyan.vercel.app",
+]
+
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
