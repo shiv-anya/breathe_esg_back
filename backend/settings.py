@@ -57,7 +57,11 @@ DATABASES = {
     }
 }
 
-CORS_ALLOW_ALL_ORIGINS = True
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'UTC'
+
+STATIC_URL = 'static/'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "https://breathe-esg-front-cyan.vercel.app",
@@ -66,9 +70,3 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "https://breathe-esg-front-cyan.vercel.app",
 ]
-
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
-
-STATIC_URL = 'static/'
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
