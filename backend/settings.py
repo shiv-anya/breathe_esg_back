@@ -5,6 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'dev-secret-key'
 DEBUG = True
 ALLOWED_HOSTS = [
+    "breathe-esg-backend.onrender.com",
     ".onrender.com",
     "localhost",
     "127.0.0.1",
@@ -72,8 +73,17 @@ CSRF_TRUSTED_ORIGINS = [
     "https://breathe-esg-front-cyan.vercel.app",
 ]
 
-CORS_ALLOW_HEADERS = [
-    '*',
+CORS_ALLOW_CREDENTIALS = True
+
+# Allows common methods (GET, POST, PUT, PATCH, DELETE, OPTIONS)
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+    "HEAD",
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
